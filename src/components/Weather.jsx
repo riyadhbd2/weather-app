@@ -58,6 +58,9 @@ const Weather = () => {
         location: data.name,
         icon: icon,
       });
+
+    //   clear input data field after search
+      inputRef.current.value = "";
     } catch (error) {
         setWeatherData(false);
         console.error("Error in fecthing data");
